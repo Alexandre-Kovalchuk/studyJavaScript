@@ -1,48 +1,87 @@
-
+// Homework - 1
 // const userName = prompt("Enter your name ");
 
 // alert(`Hello ${userName}`);
 
-const firstNumberUser = +prompt("Enter the first number");
-const secondNumberUser = +prompt("Enter the second number");
+// Homework - 2
 
+// const firstNumberUser = +prompt("Enter the first number");
+// const secondNumberUser = +prompt("Enter the second number");
 
-const div = firstNumberUser / secondNumberUser;
-const sub = firstNumberUser - secondNumberUser;
+// const div = firstNumberUser / secondNumberUser;
+// const sub = firstNumberUser - secondNumberUser;
 
 // task-1
 
-if (firstNumberUser / secondNumberUser && secondNumberUser == 0) {
-   alert('Error');
-}
-else  {
-   alert(div);
-}
-
+// if (firstNumberUser / secondNumberUser && secondNumberUser == 0) {
+//    alert('Error');
+// }
+// else {
+//    alert(div);
+// }
 
 // task-2
 
-if (firstNumberUser < secondNumberUser) {
-   let message = confirm('Ви впевнені, що хочете продовжити операцію?');
-   if (message == true) {
-      alert(sub);
-   }
-   else if (message == false) {
-      alert('Операція скасована');
-   }
-}
-
+// if (firstNumberUser < secondNumberUser) {
+//    let message = confirm('Ви впевнені, що хочете продовжити операцію?');
+//    if (message == true) {
+//       alert(sub);
+//    }
+//    else if (message == false) {
+//       alert('Операція скасована');
+//    }
+// }
 
 // task-3
 
-if (firstNumberUser == "" || secondNumberUser == "") {
-   alert('error');
+// if (firstNumberUser == "" || secondNumberUser == "") {
+//    alert('error');
+// }
+
+// Homework - 3 
+
+// task -1
+
+const arr = [1, 'srt', 2, 3, 'str2', 6, 7, 'str3', 9, undefined];
+
+// Task - 2 and Task - 4
+
+let sum = 0;
+
+for (let i = 0; i < arr.length; i++) {
+   if (typeof arr[i] === 'number' && !isNaN(arr[i])) {
+      sum += arr[i];
+   }
+}
+console.log(sum);
+
+// Task - 3
+
+let min = arr[0];
+let max = min;
+for (let i = 1; i < arr.length; ++i) {
+   if (arr[i] > max) { max = arr[i]; }
+   if (arr[i] < min) { min = arr[i]; }
 }
 
+console.log(max);
+console.log(min);
+
+// another way to find the max and min value
+
+const maxVal = Math.max(...arr);
+const minVal = Math.min(...arr);
+
+console.log(maxVal);
+console.log(minVal);
 
 
 
+let line = 5;
+let str = '';
+let star = '#';
 
-
-
-
+for(let i = 0; i < line; i++ ){
+   str += star;
+   console.log(str);
+}
